@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+
+{% block title %}Shop List{% endblock title %}
+{% load static %}
+{% block content %} 
+<main>
+    {% for good in goods %}
+        <div class="good parent">
+            <img src="{{ good.Image.url }}">
+            <p class="name">{{ good.Name }}</p>
+            <span class="priceline">Price: <span class="price">{{ good.Price }}</span>$</span>
+            <button class="buy" type="submit">Add to cart</button>
+            
+        </div>
+    {% endfor %}
+</main>
+<form id="floating-panel" method="post" style="display: none;">
+    {% csrf_token %}
+    <span id="close-btn">X</span>
+    <p>CART</p>
+    <span id="total">Total sum: <span id="totalsum">0</span></span>
+    <button type="submit">BUY</button>
+    <input id="inputtotal" type="text" name="inputtotal">
+</form>
+<style>
+    #inputtotal{
+        display: none;
+    }
+    #floating-panel p{
+        margin: 10px;
+    }
+    #floating-panel{
+        background-color: rgb(57, 202, 76);
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 10;
+        margin: 0;
+        padding: 0;
+        min-width: 380px;
+    }
+    #close-btn {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        position: absolute;
+    }
+    #floating-panel button {
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        margin: 10px auto;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    img{
+        width: 250px;
+        height: 200px;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px auto;
+        flex-wrap: wrap;
+    }
+    p{
+        text-align: center;
+    }
+    .good img{
+        border: 1px solid black;
+    }
+    button{
+        width: 120px;
+    }
+    .orderedItemBlock{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .orderedItem{
+        margin: 1px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color:rgb(15, 176, 15)
+    }
+    .orderedItem img{
+        width: 120px;
+        height: 120px;
+    }
+    .close-btn{
+        cursor: pointer;
+    }
+    .parent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between ;
+        height: 35vh;
+    }
+</style>
+<script>
+    let closeBtn = document.getElementById('close-btn');
+    let panel = document.getElementById('floating-panel');
+    let imgShop = document.getElementById("mainphoto");
+    
+    imgShop.addEventListener('click', function() {
+      panel.style.display = 'block';
+    });
+    
+    closeBtn.addEventListener('click', function() {
+      panel.style.display = 'none';
+    });
+
+function addItemToCart(){
+    
+    let buttons = document.querySelectorAll('.buy');
+    for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+        let newItem = document.createElement('div');
+        newItem.classList.add('orderedItem');
+        let newItemName = document.createElement('p');
+        let parent = this.closest('.parent');
+        let info = parent.querySelector('.name').textContent;
+        let newItemNames = document.querySelectorAll('.orderedName');
+        let elementExists = Array.from(newItemNames).some(name => name.textContent === info);
+        if (!elementExists) {
+            let newItemBlock = document.createElement('div');
+            newItemBlock.classList.add('orderedItemBlock');
+            newItemPrice = document.createElement('p');
+            parentPrice = parent.querySelector('.price');
+            newItemPrice.textContent = parentPrice.textContent;
+            newItemPrice.classList.add('orderedPrice')
+            let newItemQuantity = document.createElement('input');
+            newItemQuantity.type = 'number';
+            newItemQuantity.value = 1;
+            newItemQuantity.min = 1;
+            newItemQuantity.step = 1;
+            newItemQuantity.classList.add('orderedQuantity');
+            newItemQuantity.name ='input_quantity';
+            let newItemHidden = document.createElement('input');
+            newItemHidden.value = info;
+            newItemHidden.name = 'input_name';
+            newItemHidden.style.display = 'none';
+            let photoSrc = parent.querySelector('img').getAttribute('src');
+            let newItemPhoto = document.createElement('img');
+            newItemPhoto.setAttribute('src', photoSrc);
+            newItemName.classList.add('orderedName');
+            newItemName.textContent = info;
+            newItemClose = document.createElement('span');
+            newItemClose.textContent = "X"
+            newItemClose.classList.add('close-btn');
+            newItem.appendChild(newItemPhoto);
+            newItemBlock.appendChild(newItemName);
+            newItemBlock.appendChild(newItemPrice);
+            newItemBlock.appendChild(newItemQuantity);
+            newItem.appendChild(newItemBlock);
+            newItem.appendChild(newItemClose);
+            newItem.appendChild(newItemHidden);
+            panel.appendChild(newItem);
+            /////
+            newItemQuantity.addEventListener('change', totalSum);
+            newItemClose.addEventListener('click', function(){
+                newItem.remove();
+            })
+            newItemClose.addEventListener('click', totalSum);
+            totalSum();
+        }
+      });
+    }
+  }
+  
+  function totalSum() {
+    let totalAmount = 0; // Initialize total amount to 0
+    let orderedItems = document.querySelectorAll('.orderedItemBlock');
+    for (let i = 0; i < orderedItems.length; i++) {
+      let price = parseInt(orderedItems[i].querySelector('.orderedPrice').textContent);
+      let quantity = parseInt(orderedItems[i].querySelector('.orderedQuantity').value);
+      let subtotal = price * quantity;
+      totalAmount += subtotal;
+    }
+    let totalAmountElement = document.getElementById('totalsum');
+    totalAmountElement.textContent = totalAmount.toFixed(2);
+    let inputtotal = document.getElementById('inputtotal');
+    inputtotal.textContent = totalAmount.toFixed(2);
+    inputtotal.value = inputtotal.textContent
+  }
+  function deleteParent(){
+    
+  }
+addItemToCart();
+
+
+</script>
+{% endblock content %}

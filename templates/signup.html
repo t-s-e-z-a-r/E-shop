@@ -1,0 +1,52 @@
+{% extends 'base.html' %} 
+{% block title %}Sign Up{% endblock %} 
+{% block content %} 
+<form method="post"> 
+    <h2>Sign up</h2> 
+    {% csrf_token %} 
+    {{form.as_p}}
+    <button type="submit">Sign up</button> 
+</form> 
+
+<style>
+    label{
+        margin: 10px;
+    }
+    input{
+        display: block;
+        width: 40vw;
+        padding: 6px;
+        margin: 10px;
+    }
+    .helptext{
+        display: none;
+    }
+    form{
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        width: 60vw;
+        background-color: rgb(228, 228, 228);
+        padding: 5px;
+    }
+    h2{
+        margin: 10px;
+    }
+    button{
+        background-color: rgb(32, 163, 71);
+        width: 30vw;
+        height: 40px;
+        color: white;
+        font-size: 28px;
+        border: white 1px solid;
+        margin: 3px;
+    }
+    button:hover{
+        background-color: rgba(32, 163, 71, 0.53);
+
+    }
+</style>
+{% endblock %}

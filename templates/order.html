@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<form id='order' method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<style>
+  #order{
+    height: 40wh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+  }
+  #order label{
+    display: block;
+  }
+  #order input{
+    width: 35vw;
+  }
+  #order *{
+    margin: 3px;
+  }
+  #order button{
+    width: 20vw;
+    margin: 20px;
+  }
+</style>
+{% endblock content %}

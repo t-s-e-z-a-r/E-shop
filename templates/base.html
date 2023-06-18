@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=a, initial-scale=1.0">
+</head>
+{% load static %}
+<body>
+    <header>
+        <div class='left'>
+            <h1><a href='{% url 'home' %}'>Pet Project</a></h1>
+            <a href='{% url 'shop' %}'>Shop</a>
+
+        </div>
+        <div class="right">
+        {% if user.is_authenticated %}
+            <span class="author">Welcome, {{ user.username }}<br><a id="logout" href="{% url 'logout'%}">logout  </a></span>
+        {%else%}
+            <span class="author"><a href="{%url 'signup'%}">Sign up</a> | <a href='{% url 'login' %}'>Log in</a></span>
+        {% endif %}
+            <img id="mainphoto" src="{% static 'images/1.png' %}">
+        </div>
+    </header>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
+
+<style>
+    #logout{
+        font-size: 16px;
+    }
+    header{
+        background-color: rgb(36, 150, 44);
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .right{
+        display: flex;
+        flex-direction: row ;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #total{
+        width: 70%;
+        position: absolute;
+        bottom: 30px;
+        margin: 10px auto ;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    #mainphoto{
+        width: 80px;
+        height: 67px;
+        padding: 4px;
+    }
+    *{
+        margin: 0;
+    }   
+    a{
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    h1 a{
+        margin: auto 5px;
+        font-size: 1em;
+        margin-block: 0;
+        padding: 0;
+    }
+    button{
+        background-color: rgb(220, 227, 233);
+        color: brown;
+        font-size: 16px;
+    }
+
+    
+</style>
+<script>
+
+    
+</script>

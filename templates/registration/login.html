@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+{% block title %}Login{% endblock %} 
+{% block content %} 
+<!-- login.html -->
+<form method="post">
+    {% csrf_token %}
+    {% if error_message %}
+      <p>{{ error_message }}</p>
+    {% endif %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username">
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
+    <br>
+    <input type="submit" value="Login">
+  </form>
+<style>
+  form{
+    border: 0.5px black solid;
+    padding: 7px;
+    width: 40%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+{% endblock %}
