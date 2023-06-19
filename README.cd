@@ -1,0 +1,3 @@
+Команди для Docker Desktop
+docker build -t petprofect .
+docker run -p 8080:8080 petproject
