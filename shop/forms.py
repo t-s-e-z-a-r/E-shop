@@ -1,11 +1,6 @@
-from typing import Any, Mapping, Optional, Type, Union
 from django import forms
-from django.forms.utils import ErrorList
-
-
 from .models import Customer, Order, OrderItem, Good
-from django.shortcuts import redirect
-from django.views.generic import ListView
+
 
 
 class BuyForm(forms.Form):
@@ -16,9 +11,9 @@ class BuyForm(forms.Form):
     Address = forms.CharField(max_length=500)
     def __init__(self, *args, **kwargs):
         super(BuyForm, self).__init__(*args, **kwargs)
-        fn = self.initial.get('fn', '')  # Отримати значення fn з початкових даних або встановити за замовчуванням пустий рядок
-        ln = self.initial.get('ln', '')  # Отримати значення fn з початкових даних або встановити за замовчуванням пустий рядок
-        em = self.initial.get('em', '')  # Отримати значення em з початкових даних або встановити за замовчуванням пустий рядок
+        fn = self.initial.get('fn', '')  
+        ln = self.initial.get('ln', '')  
+        em = self.initial.get('em', '')  
         self.fields['first_name'].initial = fn  
         self.fields['last_name'].initial = ln  
         self.fields['email'].initial = em

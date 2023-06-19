@@ -3,8 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, CreateView
 from users.models import User
 from .forms import UserForm
-from django.contrib.auth import authenticate, login
-from django.views import View
+
 
 
 class HomeView(TemplateView):

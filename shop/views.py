@@ -1,10 +1,9 @@
 import django.db
 from django.shortcuts import redirect, render
 from shop.forms import BuyForm
-from shop.models import Good, Customer
-# Create your views here.
+from shop.models import Good
 from django.shortcuts import render, redirect
-from django.contrib.auth import login
+
 
 
 
@@ -22,7 +21,7 @@ def Shop_list_view(request):
     return render(request, 'shoplist.html', {'goods': goods})
 
 def Order_view(request):
-    input_names = request.session.get('input_names', [])  # Отримати кешовані дані з сесії
+    input_names = request.session.get('input_names', []) 
     input_quantities = request.session.get('input_quantities', [])
     inputtotal = request.session.get('inputtotal')
     if request.method == 'POST':

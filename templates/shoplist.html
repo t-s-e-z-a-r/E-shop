@@ -165,7 +165,6 @@ function addItemToCart(){
             newItem.appendChild(newItemClose);
             newItem.appendChild(newItemHidden);
             panel.appendChild(newItem);
-            /////
             newItemQuantity.addEventListener('change', totalSum);
             newItemClose.addEventListener('click', function(){
                 newItem.remove();
@@ -178,7 +177,7 @@ function addItemToCart(){
   }
   
   function totalSum() {
-    let totalAmount = 0; // Initialize total amount to 0
+    let totalAmount = 0; 
     let orderedItems = document.querySelectorAll('.orderedItemBlock');
     for (let i = 0; i < orderedItems.length; i++) {
       let price = parseInt(orderedItems[i].querySelector('.orderedPrice').textContent);
