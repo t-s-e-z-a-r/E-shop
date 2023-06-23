@@ -1,5 +1,12 @@
+Даний сайт є моїм "Pet project'ом" на якому я реалізую деякі механіки онлайн магазину
+
 Команди для Docker Desktop
 docker build -t my-django-app .
 docker run -p 8000:8000 my-django-app
 Сайт буде доступний за посиланням:
 http://127.0.0.1:8000/
+
+За цим посиланням ви можете перейти до інтерфейсу адміна 
+Username: test
+Password: 1111
+http://127.0.0.1:8000/admin
