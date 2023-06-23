@@ -1,13 +1,23 @@
-# Використовуємо базовий образ Python
-FROM python:3.9
+# Используем базовый образ Python
+FROM python:3.8
 
-# Встановлюємо залежності проекту
-COPY requirements.txt /code/requirements.txt
-WORKDIR /code
+# Устанавливаем переменную окружения для отключения вывода логов Python
+ENV PYTHONUNBUFFERED 1
+
+# Устанавливаем зависимости для работы с изображениями
+RUN apt-get update && apt-get install -y libjpeg-dev zlib1g-dev
+
+# Создаем рабочую директорию для проекта
+WORKDIR /app
+
+# Копируем requirements.txt в контейнер
+COPY requirements.txt /app/
+
+# Устанавливаем зависимости проекта
 RUN pip install -r requirements.txt
 
-# Копіюємо весь код проекту в контейнер
-COPY . /code/
+# Копируем остальные файлы проекта в контейнер
+COPY . /app/
 
-# Виконуємо команду запуску Django-сервера
-CMD ["python", "manage.py", "runserver", "127.0.0.1:8080"]
+# Запускаем команду для запуска Django приложения
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

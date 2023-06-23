@@ -219,46 +219,6 @@
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Mapping",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Type",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "forms",
         "importPath": "django",
         "description": "django",
@@ -272,102 +232,6 @@
         "description": "django",
         "isExtraImport": true,
         "detail": "django",
-        "documentation": {}
-    },
-    {
-        "label": "forms",
-        "importPath": "django",
-        "description": "django",
-        "isExtraImport": true,
-        "detail": "django",
-        "documentation": {}
-    },
-    {
-        "label": "ErrorList",
-        "importPath": "django.forms.utils",
-        "description": "django.forms.utils",
-        "isExtraImport": true,
-        "detail": "django.forms.utils",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "ListView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "TemplateView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "CreateView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
         "documentation": {}
     },
     {
@@ -384,38 +248,6 @@
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "HomeView",
-        "importPath": "users.views",
-        "description": "users.views",
-        "isExtraImport": true,
-        "detail": "users.views",
-        "documentation": {}
-    },
-    {
-        "label": "SignUpView",
-        "importPath": "users.views",
-        "description": "users.views",
-        "isExtraImport": true,
-        "detail": "users.views",
-        "documentation": {}
-    },
-    {
-        "label": "HomeView",
-        "importPath": "users.views",
-        "description": "users.views",
-        "isExtraImport": true,
-        "detail": "users.views",
-        "documentation": {}
-    },
-    {
-        "label": "SignUpView",
-        "importPath": "users.views",
-        "description": "users.views",
-        "isExtraImport": true,
-        "detail": "users.views",
         "documentation": {}
     },
     {
@@ -435,6 +267,54 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "BuyForm",
         "importPath": "shop.forms",
         "description": "shop.forms",
@@ -448,38 +328,6 @@
         "description": "shop.models",
         "isExtraImport": true,
         "detail": "shop.models",
-        "documentation": {}
-    },
-    {
-        "label": "Customer",
-        "importPath": "shop.models",
-        "description": "shop.models",
-        "isExtraImport": true,
-        "detail": "shop.models",
-        "documentation": {}
-    },
-    {
-        "label": "login",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "authenticate",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "login",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -534,14 +382,6 @@
         "documentation": {}
     },
     {
-        "label": "UserCreationForm",
-        "importPath": "django.contrib.auth.forms",
-        "description": "django.contrib.auth.forms",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.forms",
-        "documentation": {}
-    },
-    {
         "label": "make_password",
         "importPath": "django.contrib.auth.hashers",
         "description": "django.contrib.auth.hashers",
@@ -555,6 +395,38 @@
         "description": "django.contrib.auth.hashers",
         "isExtraImport": true,
         "detail": "django.contrib.auth.hashers",
+        "documentation": {}
+    },
+    {
+        "label": "HomeView",
+        "importPath": "users.views",
+        "description": "users.views",
+        "isExtraImport": true,
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "SignUpView",
+        "importPath": "users.views",
+        "description": "users.views",
+        "isExtraImport": true,
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "CreateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
         "documentation": {}
     },
     {
@@ -563,14 +435,6 @@
         "description": "users.models",
         "isExtraImport": true,
         "detail": "users.models",
-        "documentation": {}
-    },
-    {
-        "label": "View",
-        "importPath": "django.views",
-        "description": "django.views",
-        "isExtraImport": true,
-        "detail": "django.views",
         "documentation": {}
     },
     {
@@ -884,7 +748,7 @@
         "kind": 6,
         "importPath": "shop.forms",
         "description": "shop.forms",
-        "peekOfCode": "class BuyForm(forms.Form):\n    first_name = forms.CharField(max_length=255)\n    last_name = forms.CharField(max_length=255)\n    email = forms.EmailField()\n    number = forms.IntegerField()\n    Address = forms.CharField(max_length=500)\n    def __init__(self, *args, **kwargs):\n        super(BuyForm, self).__init__(*args, **kwargs)\n        fn = self.initial.get('fn', '')  # Отримати значення fn з початкових даних або встановити за замовчуванням пустий рядок\n        ln = self.initial.get('ln', '')  # Отримати значення fn з початкових даних або встановити за замовчуванням пустий рядок",
+        "peekOfCode": "class BuyForm(forms.Form):\n    first_name = forms.CharField(max_length=255)\n    last_name = forms.CharField(max_length=255)\n    email = forms.EmailField()\n    number = forms.IntegerField()\n    Address = forms.CharField(max_length=500)\n    def __init__(self, *args, **kwargs):\n        super(BuyForm, self).__init__(*args, **kwargs)\n        fn = self.initial.get('fn', '')  \n        ln = self.initial.get('ln', '')  ",
         "detail": "shop.forms",
         "documentation": {}
     },
@@ -938,7 +802,7 @@
         "kind": 2,
         "importPath": "shop.views",
         "description": "shop.views",
-        "peekOfCode": "def Order_view(request):\n    input_names = request.session.get('input_names', [])  # Отримати кешовані дані з сесії\n    input_quantities = request.session.get('input_quantities', [])\n    inputtotal = request.session.get('inputtotal')\n    if request.method == 'POST':\n        form = BuyForm(request.POST)\n        if form.is_valid():\n            form.save(input_names, input_quantities, inputtotal)\n            return redirect('home')\n    else:",
+        "peekOfCode": "def Order_view(request):\n    input_names = request.session.get('input_names', []) \n    input_quantities = request.session.get('input_quantities', [])\n    inputtotal = request.session.get('inputtotal')\n    if request.method == 'POST':\n        form = BuyForm(request.POST)\n        if form.is_valid():\n            form.save(input_names, input_quantities, inputtotal)\n            return redirect('home')\n    else:",
         "detail": "shop.views",
         "documentation": {}
     },
