@@ -1,3 +1,5 @@
 Команди для Docker Desktop
-docker build -t petprofect .
-docker run -p 8080:8080 petproject
+docker build -t my-django-app .
+docker run -p 8000:8000 my-django-app
+Сайт буде доступний за посиланням:
+http://127.0.0.1:8000/
